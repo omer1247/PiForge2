@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: piforge
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: SERVER_MAX_DIGITS
+        value: "100000"
+      - key: MAX_DIGITS
+        value: "2000000"
